@@ -1,0 +1,22 @@
+.App_page{
+  background-color: #121212;
+  height: 100%;
+  width: 100%;
+  padding: 15px 10px;
+}
+.dropdown-toggle {
+  border: 1px solid #FFF !important;
+  background-color: #1A1A1A !important;
+  color: #FFF !important;
+  padding: 6px !important;
+  border-radius: 50% !important;
+  width: 40px !important;
+  height: 40px !important;
+  display: inline-flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  }
+  .dropdown-toggle::after{
+   display: none;
+  }
