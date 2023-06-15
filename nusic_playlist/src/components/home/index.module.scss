@@ -1,12 +1,12 @@
 .home_page {
- font-family: "Roboto";
+  font-family: "Roboto";
   .home_card_container {
     display: flex;
     flex-direction: row;
     gap: 10px;
     justify-content: space-between;
     color: #fff !important;
-    background-color: #121212 !important;
+    background-color: #282828 !important;
     .home_card_image {
       width: 20%;
     }
@@ -15,33 +15,60 @@
         font-size: 24px;
       }
       .title_header {
-       font-size: 50px;
+        font-size: 50px;
       }
       .playlist_name {
-       color: #4D5966;
-       display: block;
-       font-size: 16px;
+        color: #4d5966;
+        display: block;
+        font-size: 16px;
       }
       .total_sings {
-       color: #4D5966;
-       font-size: 16px;
-       display: block;
-       strong{
-        color: #FFF;
-       }
+        color: #4d5966;
+        font-size: 16px;
+        display: block;
+        strong {
+          color: #fff;
+        }
       }
-      .playBtn{
-       border: 1px solid #54BA53;
-       background-color: #54BA53;
-       color: #FFF;
-       padding: 4px 20px;
-       border-radius: 10px;
-       width: 120px;
-       font-size: 22px;
-       margin-right: 10px;
-      }
-      .menuBtnModal{
-       
+      .card_footer {
+        display: flex;
+        flex-direction: row !important;
+        align-items: center !important;
+        .playBtn {
+          border: 1px solid #54ba53;
+          background-color: #54ba53;
+          color: #fff;
+          padding: 4px 20px;
+          border-radius: 10px;
+          width: 120px;
+          font-size: 22px;
+          margin-right: 10px;
+        }
+
+        .menuBtnModal {
+          border: 1px solid #fff !important;
+          background-color: #282828 !important;
+          color: #fff !important;
+          padding: 6px !important;
+          border-radius: 50% !important;
+          width: 40px !important;
+          height: 40px !important;
+          display: inline-flex !important;
+          flex-direction: row !important;
+          align-items: center !important;
+          justify-content: center !important;
+          &::after {
+            display: none;
+          }
+        }
+        .menu_dropDown_modal {
+          // background-color: #282828 !important;
+          color: #fff !important;
+          padding: 4px;
+          max-height: calc(100vh - 24px);
+          max-width: 350px;
+          min-width: 160px;
+        }
       }
     }
   }

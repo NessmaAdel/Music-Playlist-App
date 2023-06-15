@@ -1,8 +1,17 @@
 import React from "react";
-import { Row, Container, Col, Card, Button,Dropdown,DropdownButton } from "react-bootstrap";
+import {
+  Row,
+  Container,
+  Col,
+  Card,
+  Button,
+  Dropdown,
+  DropdownButton,
+} from "react-bootstrap";
 import ImagePlaylist from "../../assets/maxresdefault.jpg";
 import styles from "./index.module.scss";
 import Songs from "./Songs_List.json";
+import SongsTable from '../song_table';
 export default function Home() {
   return (
     <div className={styles.home_page}>
@@ -29,20 +38,48 @@ export default function Home() {
                     songs,1hr 38min
                   </span>
                 </Card.Text>
+                <div className={styles.card_footer}>
                 <Button className={styles.playBtn}>Play</Button>
-                <DropdownButton
-                  id="dropdown-item-button"
-                  title="..."
-                  className={styles.menuBtnModal}
-                >
-                  <Dropdown.ItemText>Dropdown item text</Dropdown.ItemText>
-                  <Dropdown.Item as="button">Action</Dropdown.Item>
-                  <Dropdown.Item as="button">Another action</Dropdown.Item>
-                  <Dropdown.Item as="button">Something else</Dropdown.Item>
-                </DropdownButton>
+                <Dropdown >
+                  <Dropdown.Toggle
+                    id="dropdown-custom-1"
+                   className={styles.menuBtnModal}
+                  >
+                   ...
+                  </Dropdown.Toggle>
+                  <Dropdown.Menu className={styles.menu_dropDown_modal}>
+                    <Dropdown.Item as="button" disabled>
+                      Go To Playlist Radio
+                    </Dropdown.Item>
+                    <Dropdown.Divider />
+                    <Dropdown.Item as="button" disabled>
+                      Collaborative Playlist
+                    </Dropdown.Item>
+                    <Dropdown.Item as="button" disabled>
+                      Make Secret
+                    </Dropdown.Item>
+                    <Dropdown.Divider />
+                    <Dropdown.Item as="button">Edit Details</Dropdown.Item>
+                    <Dropdown.Item as="button">Delete</Dropdown.Item>
+                    <Dropdown.Divider />
+                    <Dropdown.Item as="button" disabled>
+                      Create Similar Playlist
+                    </Dropdown.Item>
+                    <Dropdown.Item as="button" disabled>
+                      Download
+                    </Dropdown.Item>
+                    <Dropdown.Item as="button" disabled>
+                      Share
+                    </Dropdown.Item>
+                  </Dropdown.Menu>
+                </Dropdown>
+                </div>
               </Card.Body>
             </Card>
           </Col>
+        </Row>
+        <Row>
+          <SongsTable Songs={Songs}/>
         </Row>
       </Container>
     </div>
